@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GoogleLoginButton from "./GoogleBtn";
 
-function App() {
+const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleSuccess = (tokenId) => {
@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="w-[100%] h-[100vh] bg-[#fff]">
+    <div>
       {isAuthenticated ? (
         <p>You are logged in with Google.</p>
       ) : (
@@ -25,6 +25,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;
